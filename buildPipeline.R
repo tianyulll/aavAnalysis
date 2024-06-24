@@ -1,0 +1,31 @@
+library(usethis)
+library(devtools)
+
+create_package("~/project/rproj/aavAnalysis/")
+
+# usethis::use_github_action()
+usethis::use_package("ggplot2")
+usethis::use_package("RColorBrewer")
+usethis::use_package("vegan")
+usethis::use_package("RMariaDB")
+usethis::use_package("readxl")
+usethis::use_package("stringr")
+usethis::use_package("tools")
+
+usethis::use_r("getSummaryDf")
+usethis::use_r("getAAVengeRData")
+usethis::use_r("getRearrangement")
+
+usethis::use_r("plotAbundance")
+usethis::use_r("plotRemnant")
+usethis::use_r("plotRearrangement")
+
+# library(tidyr)
+# library(ggplot2)
+# library(dplyr)
+# library(argparse)
+# library(vegan)
+# library(RColorBrewer)
+# library(RMariaDB)
+# library(readxl)
+# library(rtracklayer)
