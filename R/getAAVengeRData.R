@@ -16,8 +16,7 @@ getAvailAAVengeR <- function(){
 
 tmpFile <- function(){ paste0(paste0(stringi::stri_rand_strings(30, 1, '[A-Za-z0-9]'), collapse = ''), '.tmp') }
 
-#' @param o
-#' @param tmpDirPath
+
 #'
 #' @author Dr. John Everett
 reconstructDBtable <- function(o, tmpDirPath){
@@ -37,9 +36,6 @@ reconstructDBtable <- function(o, tmpDirPath){
   r
 }
 
-#' @param dbConn
-#' @param trial
-#' @param tmpDirPath
 #'
 #' @author Dr. John Everett
 pullDBTrialSites <- function(dbConn, trial, tmpDirPath){

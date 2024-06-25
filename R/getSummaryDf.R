@@ -8,7 +8,6 @@
 #' @import dplyr
 #' @export getProcessedDf
 #'
-#' @examples
 getProcessedDf <- function(df, meta = NULL, minreads = 0) {
 
   if (is.null(meta)) {
@@ -38,7 +37,6 @@ getProcessedDf <- function(df, meta = NULL, minreads = 0) {
 #' @import dplyr
 #' @export getSummary
 #'
-#' @examples
 getSummary <- function(df) {
 
   o <- df %>%

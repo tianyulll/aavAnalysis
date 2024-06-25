@@ -4,12 +4,7 @@
 #' By default, writes aavenger read credentials to ~/.my.cnf
 #' must give password.
 #'
-#' @param user
-#' @param password
-#' @param host
-#' @param port
-#' @param database
-#' @param file_path
+#' @param password to access the database
 #' @export setDbConfig
 #'
 setDbConfig <- function(user = "aavenger", password, host = "174.129.238.44",

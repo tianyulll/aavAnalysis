@@ -13,6 +13,9 @@ setDbConfig(
   file_path = "~/.my.cnf"
 )
 }
+\arguments{
+\item{password}{to access the database}
+}
 \description{
 By default, writes aavenger read credentials to ~/.my.cnf
 must give password.

@@ -11,10 +11,12 @@ usethis::use_package("RMariaDB")
 usethis::use_package("readxl")
 usethis::use_package("stringr")
 usethis::use_package("tools")
+usethis::use_package("dplyr")
 
 usethis::use_r("getSummaryDf")
 usethis::use_r("getAAVengeRData")
 usethis::use_r("getRearrangement")
+usethis::use_r("getAbundanceDf")
 
 usethis::use_r("plotAbundance")
 usethis::use_r("plotRemnant")
@@ -22,7 +24,11 @@ usethis::use_r("plotRearrangement")
 
 usethis::use_r("setDBConfig")
 
-usethis::use_readme_md()
+usethis::use_package_doc()
+usethis::use_readme_rmd()
+devtools::build_readme()
+
+usethis::use_mit_license(copyright_holder = "Bushman Lab")
 
 # library(tidyr)
 # library(ggplot2)

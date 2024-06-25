@@ -1,3 +1,4 @@
+#'
 #' @param x column value in repLeaderSeqMap
 #'
 #' @return the length of the site. last value before"["
@@ -22,7 +23,6 @@ getRearrangeLength <- function(x) {
 #' @import stringr
 #' @export
 #'
-#' @examples
 getRearrangeDf <- function(df) {
 
   o <- df %>%

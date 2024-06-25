@@ -1,32 +1,39 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # aavAnalysis
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-This toolkit can be used to generate a set of tables and plots for
-outputs from AAVengeR outputs.
+This toolkit can be used to generate a set of tables and plots for outputs from AAVengeR outputs.
 
 ## Installation
 
-You can install the development version of aavAnalysis from
-[GitHub](https://github.com/) with:
-
-You can install the development version of aavAnalysis from
-[GitHub](https://github.com/) with:
+You can install the development version of aavAnalysis from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("tianyulll/aavAnalysis")
 ```
 
-This package uses
-[RMariaDB](https://github.com/r-dbi/RMariaDB?tab=readme-ov-file), which
-requires MariaDB Connector/C and should be installed first
+This package uses [RMariaDB](https://github.com/r-dbi/RMariaDB?tab=readme-ov-file), which requires MariaDB Connector/C and should be installed first
 
-    sudo apt-get install -y libmariadb-dev
+```
+sudo apt-get install -y libmariadb-dev
+```
 
 ## Example
 
