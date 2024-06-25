@@ -14,9 +14,6 @@ outputs from AAVengeR outputs.
 You can install the development version of aavAnalysis from
 [GitHub](https://github.com/) with:
 
-You can install the development version of aavAnalysis from
-[GitHub](https://github.com/) with:
-
 ``` r
 # install.packages("devtools")
 devtools::install_github("tianyulll/aavAnalysis")
@@ -43,6 +40,9 @@ aavAnalysis::getAvailAAVengeR()
 
 ## pull AAVengeR result from database
 df <- aavAnalysis::getAAVengerData("AAVHelaTopo")
+
+## process output with filter or meta data
+df <- aavAnalysis::getProcessedDf(df)
 
 ## run a summary table
 df.summary <- aavAnalysis::getSummary(df)

@@ -51,6 +51,9 @@ aavAnalysis::getAvailAAVengeR()
 ## pull AAVengeR result from database
 df <- aavAnalysis::getAAVengerData("AAVHelaTopo")
 
+## process output with filter or meta data
+df <- aavAnalysis::getProcessedDf(df)
+
 ## run a summary table
 df.summary <- aavAnalysis::getSummary(df)
 ```
