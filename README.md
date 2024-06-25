@@ -16,9 +16,13 @@ You can install the development version of aavAnalysis from [GitHub](https://git
 devtools::install_github("tianyulll/aavAnalysis")
 ```
 
+This package uses [RMariaDB](https://github.com/r-dbi/RMariaDB?tab=readme-ov-file), which requires MariaDB Connector/C and should be installed first
+`sudo apt-get install -y libmariadb-dev`
+
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+An example workflow:
 
 ``` r
 library(aavAnalysis)

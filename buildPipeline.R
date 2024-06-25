@@ -20,6 +20,8 @@ usethis::use_r("plotAbundance")
 usethis::use_r("plotRemnant")
 usethis::use_r("plotRearrangement")
 
+usethis::use_r("setDBConfig")
+
 usethis::use_readme_md()
 
 # library(tidyr)
