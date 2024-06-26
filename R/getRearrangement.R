@@ -17,7 +17,7 @@ getRearrangeLength <- function(x) {
 
 #' get rearrangement summary table
 #'
-#' @param df aavenger outputs after getProcessedDf()
+#' @param df df after \code{\link{getProcessedDf}}
 #'
 #' @return dataframe with ITR rearrangement summary
 #' @import stringr
@@ -26,13 +26,13 @@ getRearrangeLength <- function(x) {
 getRearrangeDf <- function(df) {
 
   o <- df %>%
-    select(sample, repLeaderSeqMap) %>%
+    select(sample, info, repLeaderSeqMap) %>%
     mutate(breaks = str_count(repLeaderSeqMap, ";")) %>%
     mutate(breaks = ifelse(is.na(breaks), 0, breaks)) %>%
     mutate(boolBreak = ifelse(breaks == 0, 0, 1)) %>%
     mutate(count = 1) %>%
     mutate(rearrangeLength = sapply(repLeaderSeqMap, getRearrangeLength)) %>%
-    group_by(sample) %>%
+    group_by(sample, info) %>%
     summarise(totalBreaks = sum(breaks), totalSites = sum(count),
               totalLength = sum(rearrangeLength), totalBreakBool = sum(boolBreak)) %>%
     mutate("break\u2030/length" = round(totalBreaks / totalLength*1000, 2),

@@ -1,6 +1,6 @@
 #' summarize AAVengeR outputs
 #'
-#' @param df dataframe from aavenger outputs
+#' @param df df after \code{\link{getProcessedDf}}
 #' @param meta path to meta data in rds. If not provided, will use subject column in df
 #' @param minreads  exclude sites with reads small than minreads
 #'

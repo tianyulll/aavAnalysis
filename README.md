@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# aavAnalysis
+# AAVengeR Analysis Toolkit
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -32,18 +32,27 @@ An example workflow:
 ``` r
 library(aavAnalysis)
 
-## one-time setup database connection
+## one-time setup for database connection
 aavAnalysis::setDbConfig(password = "iAmAavengeR1")
 
 ## get a list of existing runs
 aavAnalysis::getAvailAAVengeR()
 
 ## pull AAVengeR result from database
-df <- aavAnalysis::getAAVengerData("AAVHelaTopo")
+df <- aavAnalysis::getAAVengerData("AAVHelaTopo", meta = NULL, minreads = 0)
 
 ## process output with filter or meta data
 df <- aavAnalysis::getProcessedDf(df)
 
 ## run a summary table
 df.summary <- aavAnalysis::getSummary(df)
+
+## Clonal Abundnace Summary
+df.abund <- aavAnalysis::getAbundanceDf(df)
+
+## Get a list of abundance plots
+plots <- aavAnalysis::plotListAbundance(df.abund)
 ```
+
+## Contact
+[Tianyu](mailto:tianyu.lu@pennmedicine.upenn.edu) 

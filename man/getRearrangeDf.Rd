@@ -7,7 +7,7 @@
 getRearrangeDf(df)
 }
 \arguments{
-\item{df}{aavenger outputs after getProcessedDf()}
+\item{df}{df after \code{\link{getProcessedDf}}}
 }
 \value{
 dataframe with ITR rearrangement summary

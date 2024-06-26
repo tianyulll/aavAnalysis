@@ -7,7 +7,7 @@
 getProcessedDf(df, meta = NULL, minreads = 0)
 }
 \arguments{
-\item{df}{dataframe from aavenger outputs}
+\item{df}{df after \code{\link{getProcessedDf}}}
 
 \item{meta}{path to meta data in rds. If not provided, will use subject column in df}
 

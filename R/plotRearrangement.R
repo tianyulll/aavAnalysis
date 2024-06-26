@@ -8,6 +8,9 @@
 #'
 plotRearrangment <- function(df) {
 
+  df <- df %>%
+    dplyr::mutate(sample = paste(sample, info, sep = "|"))
+
   p <- ggplot2::ggplot(df, aes(x = sample, y = `breakBool%/count`, fill = sample)) +
     ggplot2::geom_bar(stat = "identity") +
     ggplot2::scale_y_continuous(expand = c(0, 0), limits = c(0,100)) +
