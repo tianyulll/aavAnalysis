@@ -12,6 +12,8 @@ usethis::use_package("readxl")
 usethis::use_package("stringr")
 usethis::use_package("tools")
 usethis::use_package("dplyr")
+usethis::use_package("readr")
+usethis::use_package("stringi")
 
 usethis::use_r("getSummaryDf")
 usethis::use_r("getAAVengeRData")

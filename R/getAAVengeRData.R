@@ -3,7 +3,7 @@
 #' To use this function, the user must set up database credentials in ~/.my.cnf
 #'
 #' @return NULL. prints available trial names
-#' @import RMariaDB
+#' @import RMariaDB readr stringi
 #' @export getAvailAAVengeR
 #'
 #' @examples getAvailAAVengeR()
