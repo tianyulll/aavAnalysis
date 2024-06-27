@@ -4,7 +4,7 @@
 \alias{plotRandomGene}
 \title{Plot Random Site in Gene and in TU}
 \usage{
-plotRandomGene(df, random_exon = NULL, random_tu = NULL)
+plotRandomGene(df, random_exon = 0, random_tu = 0)
 }
 \arguments{
 \item{df}{df after \code{\link{getGeneDf}}}

@@ -7,7 +7,10 @@
 #' @return ggplot2 object
 #' @export plotRandomGene
 #'
-plotRandomGene <- function(df, random_exon = NULL, random_tu = NULL) {
+plotRandomGene <- function(df, random_exon = 0, random_tu = 0) {
+
+  df <- df %>%
+    mutate(description = paste0(sample,"-", info))
 
   p <- ggplot(df, aes(y = description)) +
     geom_point(aes(x = `In Exon%`, shape = "exon"), alpha = 0.8) +
