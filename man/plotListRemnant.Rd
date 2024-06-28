@@ -14,7 +14,7 @@ plotListRemnant(
 )
 }
 \arguments{
-\item{df}{dataframe from \code{\link{getAbundanceDf}}}
+\item{df}{dataframe from \code{\link{getProcessedDf}}}
 
 \item{saveimg}{Default false. whether saving the image as PNG.}
 

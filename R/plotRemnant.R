@@ -68,7 +68,7 @@ plotSampleRemnant <- function(x, saveimg = F, outDir = NULL,
 
 #' Remnant Plot for all Samples
 #'
-#' @param df dataframe from \code{\link{getAbundanceDf}}
+#' @param df dataframe from \code{\link{getProcessedDf}}
 #' @param saveimg Default false. whether saving the image as PNG.
 #' @param outDir path to save img.
 #' @param buildAAVremnantPlots_ITRseqStart plot parameter: ITR start position. Default 57
@@ -85,7 +85,7 @@ plotListRemnant <- function(df, saveimg = F, outDir = NULL,
   buildAAVremnantPlots_ITRdumbellTip2 <- 147
 
   remnantPlots <- lapply(split(df, df$sample), function(sub_df) {
-    plotSampleRemnant(x = df, saveimg = saveimg, outDir = outDir,
+    plotSampleRemnant(x = sub_df, saveimg = saveimg, outDir = outDir,
                       buildAAVremnantPlots_ITRseqStart = buildAAVremnantPlots_ITRseqStart,
                       buildAAVremnantPlots_ITRlength = buildAAVremnantPlots_ITRlength,
                       buildAAVremnantPlots_NTbinSize = buildAAVremnantPlots_NTbinSize)
