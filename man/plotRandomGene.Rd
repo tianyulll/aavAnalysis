@@ -4,14 +4,18 @@
 \alias{plotRandomGene}
 \title{Plot Random Site in Gene and in TU}
 \usage{
-plotRandomGene(df, random_exon = 0, random_tu = 0)
+plotRandomGene(df, exon_mean = 0, exon_sd = 0, tu_mean = 0, tu_sd = 0)
 }
 \arguments{
 \item{df}{df after \code{\link{getGeneDf}}}
 
-\item{random_exon}{random sites in Exon percentange}
+\item{exon_mean}{mean \% of random site in exons}
 
-\item{random_tu}{random sites in Transcription Unit Percentage}
+\item{exon_sd}{std \% of random site in exons}
+
+\item{tu_mean}{mean \% of random site in transcription unit}
+
+\item{tu_sd}{std \% of random site in transcription unit}
 }
 \value{
 ggplot2 object
