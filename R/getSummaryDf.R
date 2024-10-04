@@ -10,20 +10,25 @@
 #'
 getProcessedDf <- function(df, meta = NULL, minreads = 0) {
 
+  # reformat old data style
+  if ("estAbund" %in% colnames(df)) {
+    message("Detected old INSPIRE naming, converting to AAVengeR")
+    df <- df %>%
+      mutate(sonicLengths = estAbund, nearestGene = nearestFeature) %>%
+      mutate(posid = paste(chromosome, strand, position, sep = ""))
+  }
+
   if (is.null(meta)) {
     message("meta data not provided. using subject column")
-    meta <- df %>%
-      dplyr::select(sample, subject) %>%
-      unique() %>%
-      dplyr::rename(info = subject)
+    df$info <- df$subject
   } else {
     message("reading meta data from path...")
     meta <- readRDS(meta)
+    df <- df %>% dplyr::left_join(meta, by = "sample")
   }
 
   df <- df %>%
-    dplyr::filter(reads >= minreads) %>%
-    dplyr::left_join(meta, by = "sample")
+    dplyr::filter(reads >= minreads)
 
   return(df)
 }
