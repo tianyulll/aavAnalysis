@@ -14,7 +14,7 @@ getProcessedDf <- function(df, meta = NULL, minreads = 0) {
   if ("estAbund" %in% colnames(df)) {
     message("Detected old INSPIRE naming, converting to AAVengeR")
     df <- df %>%
-      mutate(sonicLengths = estAbund, nearestGene = nearestFeature) %>%
+      mutate(sonicLengths = estAbund, nearestGene = nearestFeature, sample = internalSampleID) %>%
       mutate(posid = paste(chromosome, strand, position, sep = ""))
   }
 
